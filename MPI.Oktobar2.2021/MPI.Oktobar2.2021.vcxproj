@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{048fa820-46f0-4ad6-84c8-4ceb1481df47}</ProjectGuid>
-    <RootNamespace>Lab2023</RootNamespace>
+    <ProjectGuid>{139ac0bd-ce91-4ea6-a555-c35326ba8ea9}</ProjectGuid>
+    <RootNamespace>MPI_Oktobar2_2021</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
