@@ -38,31 +38,9 @@ int main(int argc, char** argv) {
 
 	MPI_Comm_split(upper_lower_group, cart_coords[0] == cart_coords[1], cart_rank, &upper_diagonal_comm);
 
-	//int ranks[n];
-	//for (int i = 0; i < n; i++) {
-	//	ranks[i] = i * (n + 1);
-	//	printf("%d ", ranks[i]);
-	//}
-
 	std::cout << std::endl;
 
 	MPI_Comm newgroup;
-
-	//MPI_Group_excl(cart_comm, n, ranks, &newgroup);
-
-	//int diagonal_rank;
-	//MPI_Comm_rank(upper_diagonal_comm, &diagonal_rank);
-
-	//if (cart_coords[0] + cart_coords[1] < n) {
-	//    printf("P%d: Lower matrix rank\n", upper_lower_rank);
-	//}
-	//else if (cart_coords[0] + cart_coords[1] == n) {
-	//    printf("P%d: Diagonal rank\n", diagonal_rank);
-	//}
-	//else {
-	//    printf("P%d: Upper matrix rank\n", upper_lower_rank);
-	//}
-
 	if (upper_lower_rank == 0) {
 		MPI_Isend(&sum, 1, MPI_INT, 0, 0, cart_comm, &req);
 	} if (rank == 0) {
@@ -73,7 +51,6 @@ int main(int argc, char** argv) {
 		printf("P%d: Upper sum is %d.\n", rank, res_sum);
 		fflush(stdout);
 	}
-
 
 	MPI_Finalize();
 	return 0;
